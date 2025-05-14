@@ -297,6 +297,26 @@ export const systemQuizzes: SystemQuiz[] = [
         answer: 1
       }
     ]
+  },
+  {
+    systemName: 'HD 219134',
+    questions: [
+      {
+        question: 'What paradoxical characteristic does HD 219134 b exhibit despite its Earth-like density?',
+        options: ['Liquid surface water present', 'Extreme volcanic activity', 'Habitable temperatures', 'Rocky composition with 1,015K equilibrium temp'],
+        answer: 3
+      },
+      {
+        question: 'Which measurement technique combination enabled precise density calculation for HD 219134 b?',
+        options: ['Transit + Radial Velocity', 'Astrometry + Direct Imaging', 'Transit Timing Variations + Microlensing', 'Doppler Tomography + Pulsar Timing'],
+        answer: 0
+      },
+      {
+        question: 'How does HD 219134 b\'s surface gravity compare to Earth\'s?',
+        options: ['0.5× Earth', '1.8× Earth', '3.2× Earth', '4.7× Earth'],
+        answer: 1
+      }
+    ]
   }
 ];
 
@@ -627,6 +647,72 @@ export const bodyQuizzes: BodyQuiz[] = [
       {
         question: 'Why is GJ 667 C g considered unlikely to be habitable?',
         options: ['It is likely too cold and far from the habitable zone', 'It is a gas giant', 'It is tidally locked', 'It has a thick hydrogen atmosphere'],
+        answer: 0
+      }
+    ]
+  },
+  {
+    systemName: 'HD 219134',
+    bodyName: 'HD 219134 b',
+    questions: [
+      {
+        question: 'Why is HD 219134 b considered uninhabitable despite its Earth-like density?',
+        options: ['It is too close to the star and likely too hot', 'It is a gas giant', 'It has a thick hydrogen atmosphere', 'It is outside the system'],
+        answer: 0
+      }
+    ]
+  },
+  {
+    systemName: 'HD 219134',
+    bodyName: 'HD 219134 c',
+    questions: [
+      {
+        question: 'What is the status of HD 219134 c as a planet?',
+        options: ['Candidate planet, not confirmed', 'Gas giant', 'Confirmed habitable planet', 'Mini-Neptune'],
+        answer: 0
+      }
+    ]
+  },
+  {
+    systemName: 'HD 219134',
+    bodyName: 'HD 219134 d',
+    questions: [
+      {
+        question: 'What is a unique feature of HD 219134 d compared to other exoplanets?',
+        options: ['Orbits in a triple star system', 'Has a ring system', 'Is a gas giant', 'Has a retrograde orbit'],
+        answer: 0
+      }
+    ]
+  },
+  {
+    systemName: 'HD 219134',
+    bodyName: 'HD 219134 e',
+    questions: [
+      {
+        question: 'What is a possible challenge for habitability on HD 219134 e?',
+        options: ['Tidal locking', 'Too close to the star', 'No rocky surface', 'No atmosphere'],
+        answer: 0
+      }
+    ]
+  },
+  {
+    systemName: 'HD 219134',
+    bodyName: 'HD 219134 f',
+    questions: [
+      {
+        question: 'Why is HD 219134 f\'s habitability debated?',
+        options: ['It is near the outer edge of the habitable zone', 'It is a gas giant', 'It has no rocky surface', 'It is tidally locked'],
+        answer: 0
+      }
+    ]
+  },
+  {
+    systemName: 'HD 219134',
+    bodyName: 'HD 219134 g',
+    questions: [
+      {
+        question: 'What is a key reason HD 219134 g is considered only marginally habitable?',
+        options: ['It is just outside the habitable zone', 'It is a gas giant', 'It has a surface temperature above 1000K', 'It has no atmosphere'],
         answer: 0
       }
     ]

@@ -723,4 +723,121 @@ export const gj667: StellarSystem = {
   ]
 };
 
-export const stellarSystems: StellarSystem[] = [solarSystem, proximaCentauri, trappist1, kepler442, lhs1140, ross128, tauCeti, gj667]; 
+export const hd219134: StellarSystem = {
+  name: 'HD 219134',
+  distance: 21.3,
+  star: {
+    name: 'HD 219134',
+    radius: 1.8,
+    color: '#ff9966',
+    position: [0, 0, 0],
+    orbitalPeriod: 0,
+    rotationPeriod: 42.3,
+    habitable: false,
+    description: 'A K-type main sequence star with a rich planetary system. Its high metallicity and stable nature make it an excellent target for exoplanet studies.',
+    texture: '/textures/hd219134.jpg',
+    glowIntensity: 0.3
+  },
+  habitableZone: {
+    inner: 40,
+    outer: 80
+  },
+  habitableZoneAU: {
+    inner: 0.4,
+    outer: 0.8
+  },
+  planets: [
+    {
+      name: 'HD 219134 b',
+      radius: 0.778,
+      color: '#8B4513',
+      position: [3.8, 0, 0],
+      orbitalPeriod: 3.093,
+      rotationPeriod: 3.093,
+      escapeVelocity: 21.5,
+      discoveryMethod: 'Radial Velocity + Transit',
+      description: 'A super-Earth with Earth-like density but extreme surface temperatures. Its precise density measurement makes it a key target for rocky planet studies.',
+      texture: '/textures/hd219134b.jpg',
+      realDistanceAU: 0.038,
+      controversial: false,
+      habitable: false
+    },
+    {
+      name: 'HD 219134 c',
+      radius: 0.56,
+      color: '#A0522D',
+      position: [6.5, 0, 0],
+      orbitalPeriod: 6.765,
+      rotationPeriod: 6.765,
+      escapeVelocity: 20.8,
+      discoveryMethod: 'Radial Velocity',
+      description: 'A super-Earth with a slightly longer orbital period than planet b. Its mass and radius suggest a rocky composition.',
+      texture: '/textures/hd219134c.jpg',
+      realDistanceAU: 0.065,
+      controversial: false,
+      habitable: false
+    },
+    {
+      name: 'HD 219134 d',
+      radius: 0.8,
+      color: '#CD853F',
+      position: [23.7, 0, 0],
+      orbitalPeriod: 46.71,
+      rotationPeriod: 46.71,
+      escapeVelocity: 31.2,
+      discoveryMethod: 'Radial Velocity',
+      description: 'A massive super-Earth with a longer orbital period. Its position places it near the outer edge of the habitable zone.',
+      texture: '/textures/hd219134d.jpg',
+      realDistanceAU: 0.237,
+      controversial: false,
+      habitable: false
+    },
+    {
+      name: 'HD 219134 e',
+      radius: 0.81,
+      color: '#DEB887',
+      position: [34.5, 0, 0],
+      orbitalPeriod: 70.6,
+      rotationPeriod: 94.2,
+      escapeVelocity: 17.8,
+      discoveryMethod: 'Radial Velocity',
+      description: 'A super-Earth with a long orbital period, placing it in the habitable zone. Its lower density suggests a significant volatile content.',
+      texture: '/textures/trappist1e.jpg',
+      realDistanceAU: 0.375,
+      controversial: false,
+      habitable: true
+    },
+    {
+      name: 'HD 219134 f',
+      radius: 0.81,
+      color: '#D2B48C',
+      position: [14.6, 0, 0],
+      orbitalPeriod: 22.717,
+      rotationPeriod: 22.717,
+      escapeVelocity: 24.5,
+      discoveryMethod: 'Radial Velocity',
+      description: 'A super-Earth with an intermediate orbital period. Its mass and radius suggest a rocky composition with possible volatile layers.',
+      texture: '/textures/hd219134f.jpg',
+      realDistanceAU: 0.146,
+      controversial: false,
+      habitable: false
+    },
+    {
+      name: 'HD 219134 g',
+      radius: 0.81,
+      color: '#F5DEB3',
+      position: [38.5, 0, 0],
+      orbitalPeriod: 94.2,
+      rotationPeriod: 94.2,
+      escapeVelocity: 22.8,
+      discoveryMethod: 'Radial Velocity',
+      description: 'A super-Earth with a long orbital period, placing it in the habitable zone. Its mass and radius suggest a rocky composition with possible volatile layers.',
+      texture: '/textures/trappist1e.jpg',
+      realDistanceAU: 0.3753,
+      controversial: false,
+      habitable: true
+    }
+  ]
+};
+
+export const stellarSystems: StellarSystem[] = [solarSystem, proximaCentauri, trappist1, kepler442, lhs1140, ross128, tauCeti, gj667, hd219134]; 
