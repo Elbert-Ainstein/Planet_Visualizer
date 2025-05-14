@@ -16,11 +16,15 @@ export default function OrbitingBody({ body, timeScale, parentPosition = [0, 0, 
   const [texture, setTexture] = useState<THREE.Texture | null>(null);
   const [hovered, setHovered] = useState(false);
   const elapsedTimeRef = useRef(0);
+  const positionRef = useRef<[number, number, number]>(parentPosition);
 
   useEffect(() => {
-    if (body.texture) {
+    let texturePath = body.texture;
+    if (!texturePath && body.habitable) {
+      texturePath = '/textures/earth.jpg';
+    }
+    if (texturePath) {
       const textureLoader = new THREE.TextureLoader();
-      const texturePath = body.texture.startsWith('/') ? body.texture : `/${body.texture}`;
       textureLoader.load(
         texturePath,
         (loadedTexture) => setTexture(loadedTexture),
@@ -31,7 +35,7 @@ export default function OrbitingBody({ body, timeScale, parentPosition = [0, 0, 
         }
       );
     }
-  }, [body.texture, body.name]);
+  }, [body.texture, body.name, body.habitable]);
 
   useFrame((_, delta) => {
     if (meshRef.current && body.orbitalPeriod > 0) {
@@ -41,6 +45,12 @@ export default function OrbitingBody({ body, timeScale, parentPosition = [0, 0, 
       meshRef.current.position.x = parentPosition[0] + Math.cos(angle) * distance;
       meshRef.current.position.z = parentPosition[2] + Math.sin(angle) * distance;
       meshRef.current.position.y = parentPosition[1];
+      // Update positionRef for moons
+      positionRef.current = [
+        meshRef.current.position.x,
+        meshRef.current.position.y,
+        meshRef.current.position.z
+      ];
       // Rotation
       const rotationAngle = (delta * timeScale * 2 * Math.PI) / body.rotationPeriod;
       meshRef.current.rotation.y += rotationAngle;
@@ -74,6 +84,12 @@ export default function OrbitingBody({ body, timeScale, parentPosition = [0, 0, 
             />
           </mesh>
         )}
+        {body.rings && (
+          <mesh rotation={[-Math.PI / 2, 0, 0]}>
+            <ringGeometry args={[body.radius * 1.2, body.radius * 2.2, 64]} />
+            <meshBasicMaterial color="#e5e1c6" transparent opacity={0.5} side={THREE.DoubleSide} />
+          </mesh>
+        )}
       </mesh>
       {body.glowIntensity && (
         <GlowEffect
@@ -87,7 +103,7 @@ export default function OrbitingBody({ body, timeScale, parentPosition = [0, 0, 
           key={moon.name}
           body={moon}
           timeScale={timeScale}
-          parentPosition={meshRef.current ? [meshRef.current.position.x, meshRef.current.position.y, meshRef.current.position.z] : parentPosition}
+          parentPosition={positionRef.current}
           onClick={onClick}
         />
       ))}
