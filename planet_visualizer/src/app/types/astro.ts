@@ -24,9 +24,7 @@ export interface CelestialBody {
 
 export interface StellarSystem {
   name: string;
-  stars: CelestialBody[];
-  /** @deprecated Use 'stars' instead. */
-  star?: CelestialBody;
+  star: CelestialBody;
   planets: CelestialBody[];
   distance: number;
   escapeVelocity?: number;
