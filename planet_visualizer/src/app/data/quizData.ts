@@ -22,7 +22,7 @@ export const systemQuizzes: SystemQuiz[] = [
     systemName: 'Solar System',
     questions: [
       {
-        question: 'Which of these moons is believed to have a subsurface ocean beneath an icy crust?',
+        question: 'Which of these moons do people think have a subsurface ocean beneath an icy crust?',
         options: ['Io', 'Europa', 'Callisto', 'Enceladus'],
         answer: 1
       },
@@ -42,7 +42,7 @@ export const systemQuizzes: SystemQuiz[] = [
         answer: 0
       },
       {
-        question: 'Which planet acts as the Solar System\'s "vacuum cleaner" by capturing potential Earth-impacting objects?',
+        question: 'Which planet acts as the Solar System\'s "vacuum cleaner", capturing potential asteroids that could impact Earth?',
         options: ['Saturn', 'Jupiter', 'Neptune', 'Venus'],
         answer: 1
       },
@@ -92,7 +92,7 @@ export const systemQuizzes: SystemQuiz[] = [
     systemName: 'Proxima Centauri',
     questions: [
       {
-        question: 'Which exoplanet in this system orbits within the habitable zone of its red dwarf star?',
+        question: 'Which exoplanet in this system orbits within the habitable zone?',
         options: ['Proxima Centauri b', 'Proxima Centauri c', 'Alpha Centauri Bb', 'TRAPPIST-1e'],
         answer: 0
       },
